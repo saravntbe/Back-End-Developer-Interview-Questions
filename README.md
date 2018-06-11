@@ -3,19 +3,18 @@ Back-End Developer Interview Questions
 
 This page has been translated to [Chinese](https://github.com/monklof/Back-End-Developer-Interview-Questions) by [monklof](https://github.com/monklof).
 
-I started writing down this list for a very personal goal, as a reminder of topics I had the chance to discuss with colleagues and friends, and that I wanted to deepen...
+I started writing down this list as a personal reminder of topics I had the chance to discuss with colleagues and friends, and that I wanted to deepen...
 
-I'm not a big fan of asking technical questions in job interviews: I'd rather prefer to sit together with candidates in front of some real code, facing a real problem, and have a full day of pair programming rotating with all the team members. Yet, some technical questions could be used to start a deep and nice conversation, and this can be useful to get a deeper knowledge of each other.
+I'm not a big fan of asking technical questions in job interviews: I rather prefer to sit together with candidates in front of some real code, hands on the keyboard, facing a real problem, and have a full day of pair programming, hopefully rotating with all the other team members. Yet, I feel some technical questions could be a good starting point to begin an engaging and nice conversation, and this can be useful to get a deeper knowledge of each others.
 
-This repo contains a number of backend interview questions that can be used when vetting potential candidates. It is by no means recommended to use every single question here on the same candidate: that would take hours, and would have no sense at all, as they cover a too broad set of topics no single developer would probably have such a broad knowledge. Choosing a few selected items from this list should help you vet the intended skills you require.
+This repo collects a number of back end related questions that can be used when vetting potential candidates. It is by no means recommended to use every single question on the same candidate: that would take hours, and would have no sense at all, as they cover a too broad set of topics for a single developer's to possibly know. Browse the section you find more relevant for your context, and pick the questions that give you more ideas on the conversation to have.
 
 ### Notice
-Most of the questions are open-ended, and they just don't have a **right** answer. On the contrary, they are intended to be used as the starting point for a conversation that hopefully tell you more about the person's capabilities than a straight answer would.
+Most of the questions are open-ended, and some of them just don't have a *right* or a *wrong* answer. On the contrary, they are intended to be used as the starting point for a conversation that hopefully tells you more about the person's capabilities than a straight answer would. Personally, I would even choose the questions whose answers are not yet clear to me.
 
-Again, I stress that just asking questions is hardly sufficient. Complete the interview with a long pair programming session with your candidates: it is one of the best opportunities to know each other's style and approach and to let candidates know some details about their future day job.
+Again, I stress that just asking questions is hardly sufficient. Complete the interview with a long pair programming session with your candidates: it is one of the best opportunities to know each others' style and approach and to let candidates know some details about their future day job.
 
 This project is admittedly inspired by [Front-end Job Interview Questions](https://github.com/darcyclarke/Front-end-Developer-Interview-Questions) by [@darcyclarke](https://github.com/darcyclarke)
-
 
 
 
@@ -49,19 +48,19 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 
 ### [[↑]](#toc) <a name='patterns'>Questions about Design Patterns:</a>
 
-* Why are global objects and static evil? Can you show it with a code example?
+* Why are global and static objects evil? Can you show it with a code example?
 * Tell me about Inversion of Control and how does it improve the design of code.
 * The Law of Demeter (the Principle of Least Knowledge) states that each unit should have only limited knowledge about other units and it should only talk to its immediate friends (sometimes stated as "Don't talk to strangers"). Would you write code violating this principle, show why it is a bad design and then fix it?
 * Active-Record is the design pattern that promotes objects to include functions such as Insert, Update, and Delete, and properties that correspond to the columns in some underlying database table. In your opinion and experience, which are the limits and pitfalls of the this pattern?
 * Data-Mapper is a design pattern that promotes the use of a layer of Mappers that moves data between objects and a database while keeping them independent of each other and the mapper itself. On the contrary, in Active-Record objects directly incorporate operations for persisting themselves to a database, and properties corresponding to the underlying database tables. Do you have an opinion on those patterns? When would you use one against the other?
 * Why it is often said that the introduction of `null` is a "Billion dollar mistake"? Would you discuss the techniques to avoid it, such as the Null Object Pattern introduced by the GOF book, or Option types?
-* Why is Composition often better than Inheritance?
+* Many state that, in Object-Oriented Programming, Composition is often a better option than Inheritance. What's you opinion?
 * What is an Anti-corruption Layer?
 * Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?
 * The ability to change implementation without affecting clients is called Data Abstraction. Produce and example violating this property, then fix it.
 * Write a snippet of code violating the Don't Repeat Yourself (DRY) principle. Then, fix it.
 * How would you deal with Dependency Hell?
-* Why is goto evil?
+* Is goto evil? You may have heard of the famous paper "Go To Statement Considered Harmful" by Edsger Dijkstra, in which he criticized the use of the `goto` statement and advocated structured programming instead. The use of `goto` has always been controversial, so much that even Dijkstra's letter was criticized with articles such as "'GOTO Considered Harmful' Considered Harmful". What's your opinion on the use of `goto`?
 * The robustness principle is a general design guideline for software that recommends "*Be conservative in what you send, be liberal in what you accept*". It is often reworded as "*Be a tolerant reader and a careful writer*". Would you like to discuss the rationale of this principle?
 * Separation of Concerns is a design principle for separating a computer program into distinct areas, each of ones addressing a separate concern. There are a lot of different mechanisms for achieving Separation of Concerns (use of objects, functions, modules, or patterns such as MVC and the like). Would you discuss this topic?
 
@@ -80,14 +79,13 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 * C++ supports multiple inheritance, and Java allows a class to implement multiple interfaces. What impact does using these facilities have on orthogonality? Is there a difference in impact between using multiple inheritance and multiple interfaces? Is there a difference between using delegation and using inheritance? [This question is from The Pragmatic Programmer, by Andrew Hunt and David Thomas]
 * Pros and cons of holding domain logic in Stored Procedures.
 * In your opinion, why have Object-Oriented Design dominated the market for so many years?
-* Why does array index start with '0' in most of languages?
 * What would you do to understand if your code has a bad design?
 
 
 ### [[↑]](#toc) <a name='languages'>Questions about Languages:</a>
 
 * Tell me the 3 worse defects of your preferred language
-* Why is there a rising interest about Functional Programming?
+* Why is there a rising interest on Functional Programming?
 * What is a closure, and what is useful for? What's in common between closures and classes?
 * What are generics useful for?
 * What are high-order functions? What are they useful for? Write one, in your preferred language.
@@ -102,7 +100,7 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 * Write two functions, one Referentially Transparent and the other one Referentially Opaque. Discuss.
 * Whats the Stack and what's the Heap? What's a Stack Overflow?
 * Why is it important that in a language functions are first class citizens?
-* Some languages, expecially the ones that promote a Functional approach, allow a technique called Pattern Matching. Do you know it? How is Pattern Matching different from Switch clauses?
+* Some languages, especially the ones that promote a Functional approach, allow a technique called Pattern Matching. Do you know it? How is Pattern Matching different from Switch clauses?
 * Why do some languages have no exceptions by design? What are the pros and cons?
 * If `Cat` is an `Animal`, is `TakeCare<Cat>` a `TakeCare<Animal>`?
 * Why in Java, C# and many other languages constructors are not part of the interface?
@@ -114,10 +112,10 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 ### [[↑]](#toc) <a name='web'>Questions about Web development:</a>
 * Why first-party cookies and third-party cookies are treated so differently?
 * How would you manage Web Services API versioning?
-* From a Back End perspective, are there any disadvantages or drawbacks on the adopion of Single Page Applications?
-* Why do we usually put so much effort for having stateless services? What's so good in stateless code and why and when statefullness is bad?
+* From a Back End perspective, are there any disadvantages or drawbacks on the adoption of Single Page Applications?
+* Why do we usually put so much effort for having stateless services? What's so good in stateless code and why and when statefulness is bad?
 * REST and SOAP: when would you choose one, and when the other?
-* In Web development, Model-View Controller and Model-View-View-Model approaches are very common, both in the Back End and in the Fron End. What are they, and why are they advisable?
+* In Web development, Model-View Controller and Model-View-View-Model approaches are very common, both in the Back End and in the Front End. What are they, and why are they advisable?
 
 
 ### [[↑]](#toc) <a name='databases'>Questions about Databases:</a>
@@ -136,7 +134,7 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 ### [[↑]](#toc) <a name='nosql'>Questions about NoSQL:</a>
 
 * What is Eventual Consistency?
-* About the CAP Theorem, make examples of CP, AP and CA systems.
+* The Brewer's Theorem, most commonly known as the CAP theorem, states that in the presence of a Network Partition (the P in CAP), a system's designer has to choose between Consistency (the C in CAP) and Availability (the A in CAP). Can you think about examples of CP, AP and CA systems?
 * How would you explain the recent rise in interest for NoSQL?
 * How does NoSQL tackle scalability challenges?
 * In which case would you use a document database like MongoDB instead of a relational database like MySQL or PostgreSQL?
@@ -164,8 +162,8 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 ### [[↑]](#toc) <a name='distributed'>Questions about Distributed Systems:</a>
 
 * How to test a distributed system?
-* In which case whould you apply asynchronously communication between two systems?
-* What are the general pitfalls of Remote Procecure Call?
+* In which case would you apply asynchronously communication between two systems?
+* What are the general pitfalls of Remote Procedure Call?
 * If you are building a distributed system for scalability and robustness, what are the different things you'd think of in the case you are working in a closed and secure network environment or in geographically distributed and public system?
 * How to manage Fault Tolerance in a Web application? And in a Desktop one?
 * How to deal with failures in Distributed Systems?
@@ -220,26 +218,26 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 * Scale out vs scale up: how are they different? When to apply one, when the other?
 * How to deal with failover and user sessions?
 * What is CQRS (Command Query Responsibility Segregation)? How is it different from the oldest Command-Query Separation Principle?
-* What is Three-Tier architecture?
+* The so called "multitier architecture" is an approach to design a client–server system aimed to keep physically and logically separated presentation, application processing, data management and other functions. The most widespread of the multitier architectures is the three-tier architecture. Would you discuss the pros and cons of such approach?
 * How would you design a software system for scalability?
-* What are the strategies to deal with the C10k problem?
+* Someone gave the name "The "C10k problem" to the problem of optimising network sockets to handle over 10.000 open connections at once. While handling 10.000 concurrent clients is not the same as handling 10.000 open connection, the context is similar. It's a tough challenge anyway, and no one is expected to know every single detail to solve it. It may be interesting to discuss the strategies you know to deal with that problem. Would you like to try?
 * How would you design a decentralized (that is, with no central server) P2P system?
-* Why doesn't CGI scale?
+* You may recall that Common Gateway Interface (CGI) is a standard protocol for web servers to execute programs (CGI scripts) that execute as Command-line programs on a server, and that dynamically generate HTML pages when invoked by a HTTP request. Perl and PHP used to be common languages for such scripts. In CGI, a HTTP request generally causes the invocation of a new process on the server, but FastCGI, SCGI and other approaches improved the mechanism, raising the performance, with techniques such as preforking processes. Can you imagine why has't CGI eventually win, and was instead replaced with other architectural approaches?
 * How would you defend the design of your systems against Vendor Lock-in?
 * What are the disadvantages of the Publish-Subscribe pattern at scale?
 * What's new in CPUs since the 80s, and how does it affect programming?
-* In which part of the lifecycle performance should be taken in consideration, and how?
+* In which part of the lifecycle of a software performance should be taken in consideration, and how?
 * How could a Denial of Service arise not maliciously but for a design or architectural problem?
 * What’s the relationship between Performance and Scalability?
-* When is it OK to use tight coupling?
+* When is it OK (if ever) to use tight coupling?
 * What characteristic should a system have to be Cloud Ready?
-* Does unity of design imply an aristocracy of architects? Put simple: can good design emerge from a collective effort of all developers?
+* Does unity of design imply an aristocracy of architects? Putting it simple: can good design emerge from a collective effort of all developers?
 * What's the difference between design, architecture, functionality and aesthetic? Discuss.
 
 
 
 ### [[↑]](#toc) <a name='soa'>Questions about Service Oriented Architecture and Microservices:</a>
-* Why, in a SOA, long-lived transactions are discorauged and Sagas are suggested instead?
+* Why, in a SOA, long-lived transactions are discouraged and Sagas are suggested instead?
 * What are the differences between Soa and Microservices?
 * Let's talk about web services versioning, version compatibility and breaking changes.
 * What's the difference between a transaction and a compensation operation in a saga, in SOA?
@@ -248,29 +246,29 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 
 
 ### [[↑]](#toc) <a name='security'>Questions about Security:</a>
-* How to write secure code? In your opinion, is it one of the developer's duties, or does it require a specialized role in the Company? And why?
+* How do you write secure code? In your opinion, is it one of the developer's duties, or does it require a specialized role in the company? And why?
 * Why is it said that cryptography is not something you should try to invent or design yourself?
-* What's Two Factor Authentication? How would you implement it in an existing web application?
-* If not carefully handled, logs always risk to contain sensible information, such as passwords. How would you deal with this?
+* What is two factor authentication? How would you implement it in an existing web application?
+* If not carefully handled, there is always a risk of logs containing sensitive information, such as passwords. How would you deal with this?
 * Write down a snippet of code affected by SQL Injection and fix it.
-* How would it be possible to detect SQL Injection via static code analisys? I don't expect you to write an algorithm capable of doing this, as it is probably a huge topic, but let's discuss a general approach.
+* How would it be possible to detect SQL Injection via static code analysis? I don't expect you to write an algorithm capable of doing this, as it is probably a huge topic, but let's discuss a general approach.
 * What do you know about Cross-Site Scripting? If you don't remember it, let's review online its definition and let's discuss about it.
 * What do you know about Cross-Site Forgery Attack? If you don't remember it, let's review online its definition and let's discuss about it.
 * How does HTTPS work?
-* What's a Man-in-the-middle Attack? And why does HTTPS can help protecting against it?
-* How can you prevent the user session to be stolen? Chances are you remember what Session or Cookie Hijacking is, otherwise let's read its Wikipedia page together.
+* What's a Man-in-the-middle Attack, and why does HTTPS help protect against it?
+* How can you prevent the user's session from being stolen? Chances are you remember what Session or Cookie Hijacking is, otherwise let's read its Wikipedia page together.
 
 
 ### [[↑]](#toc) <a name='general'>General Questions:</a>
 
-* Why Functional Programming matters? When should a functional programming language be used?
+* Why does Functional Programming matter? When should a functional programming language be used?
 * How do companies like Microsoft, Google, Opera and Mozilla profit from their browsers?
 * Why does opening a TCP socket have a large overhead?
 * What is Encapsulation important for?
 * What is a real-time system and how is it different from an ordinary system?
 * What's the relationship between real-time languages and heap memory allocation?
-* Immutability is the practice of setting values once, at the moment of their creation, and never changing them. How immutability can help writing safer code?
-* Pro and cons of mutable and immutable values.
+* Immutability is the practice of setting values once, at the moment of their creation, and never changing them. How can immutability help write safer code?
+* What are the pros and cons of mutable and immutable values.
 * What's the Object-Relational impedance mismatch?
 * Which principles would you apply to define the size of a cache?
 * What's the difference between TCP and HTTP?
@@ -290,7 +288,7 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 * There is an aesthetic element to all design. The question is, is this aesthetic element your friend or your enemy?
 * List the last 5 books you read.
 * How would you introduce Continuous Delivery in a successful, huge company for which the change from Waterfall to Continuous Delivery would be not trivial, because of the size and complexity of the business?
-* When does it make sense to reinvent the wheel? 
+* When does it make sense to reinvent the wheel?
 * Let's have a conversation about "*Reinventing the wheel*", the "*Not Invented Here Syndrome*" and the "*Eating Your Own Food*" practice
 * What's the next thing you would automate in your current workflow?
 * Why is writing software difficult? What makes maintaining software hard?
@@ -405,7 +403,7 @@ public class TheService {
         final String rewrittenUrl = fileHandler.getXmlFileFromFileName(file);
         final String executionId = fileHandler.getExecutionIdFromFileName(file);
 
-        if ((executionId == "") || (rewrittenUrl == "")) {
+        if (executionId.equals("") || rewrittenUrl.equals("")) {
             return "";
         }
 
@@ -467,7 +465,7 @@ This section collects some weird questions along the lines of the [Manhole Cover
 * Imagine there's a perfect clone of yourself. Imagine that that clone is your boss. Would you like to work for him/her?
 * Interview me
 * Why are Quora's answers better than Yahoo Answers' ones?
-* As a play game, defend Cobol against modern languages, and try to find as many reasonable arguments as you can.
+* Let's play a game: defend Cobol against modern languages, and try to find as many reasonable arguments as you can.
 * Where will you be in 10 years?
 * You are my boss and I'm fired. Inform me.
 * I want to refactor a legacy system. You want to rewrite it from scratch. Argument. Then, switch our roles.
